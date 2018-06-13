@@ -45,4 +45,6 @@ def beta_code_to_greek(beta_code):
   return sigma_to_end_of_word_sigma(u''.join(greek_characters))
 
 def sigma_to_end_of_word_sigma(string):
-  return re.sub(ur'σ(?=[,.:;·\s]|$)', u'ς', string)
+  regex = re.compile(u'σ(?=[,.:;·\s]|$)')
+
+  return re.sub(regex, u'ς', string)
