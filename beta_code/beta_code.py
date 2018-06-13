@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import json
 import os
 import re
@@ -43,4 +45,4 @@ def beta_code_to_greek(beta_code):
   return sigma_to_end_of_word_sigma(u''.join(greek_characters))
 
 def sigma_to_end_of_word_sigma(string):
-  return re.sub(r'σ(?=[,.:;·\s]|$)', u'ς', string)
+  return re.sub(ur'σ(?=[,.:;·\s]|$)', u'ς', string)
