@@ -13,6 +13,7 @@ setuptools.setup(
   long_description_content_type="text/markdown",
   url="https://github.com/zfletch/beta-code-py",
   packages=setuptools.find_packages(),
+  include_package_data=True,
   classifiers=(
     "Programming Language :: Python",
     "License :: OSI Approved :: MIT License",
