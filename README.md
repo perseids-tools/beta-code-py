@@ -29,14 +29,34 @@ beta_code.beta_code_to_greek('mh=nin a)/eide qea\\ *phlhi+a/dew *)axilh=os')
 
 `cd tests/ && python -m unittest test_beta_code`
 
-## Packaging
+## Updating JSON
+
+```bash
+git subtree pull --prefix beta_code/vendor/beta-code-json/ https://github.com/zfletch/beta-code-json master --squash
+```
+
+In the case of a merge conflict:
+
+```bash
+git checkout --theirs vendor/beta-code-json/
+git add vendor/beta-code-json
+git commit
+```
+
+## Publishing
+
+* Install dependencies:
 
 ```bash
 python3 -m pip install --user --upgrade setuptools wheel
-python3 setup.py sdist bdist_wheel
 python3 -m pip install --user --upgrade twine
-twine upload dist/*
 ```
+
+* Bump version in `setup.py`
+* Commit and push to GitHub
+* On GitHub, create a new release
+* Run `python3 setup.py sdist bdist_wheel`
+* Run `python3 -m twine upload dist/*`
 
 ## Notes
 
