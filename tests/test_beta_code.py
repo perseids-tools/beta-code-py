@@ -59,5 +59,10 @@ class TestBetaCode(unittest.TestCase):
       beta_code.beta_code_to_greek(u'dd*ds2'),
     )
 
+    self.assertEqual(
+      'Ὅρκος Ἄζωτον Ἕλληνας Ἆπις',
+      beta_code.beta_code_to_greek('*o(/rkos *a)/zwton *e(/llhnas *a)=pis'),
+    )
+
 if __name__ == '__main__':
   unittest.main()
