@@ -60,8 +60,8 @@ class TestBetaCode(unittest.TestCase):
     )
 
     self.assertEqual(
-      'Ὅρκος Ἄζωτον Ἕλληνας Ἆπις',
-      beta_code.beta_code_to_greek('*o(/rkos *a)/zwton *e(/llhnas *a)=pis'),
+      u'Ὅρκος Ἄζωτον Ἕλληνας Ἆπις',
+      beta_code.beta_code_to_greek(u'*o(/rkos *a)/zwton *e(/llhnas *a)=pis'),
     )
 
 if __name__ == '__main__':
