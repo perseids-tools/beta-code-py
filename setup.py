@@ -8,7 +8,7 @@ setuptools.setup(
   version="0.0.5",
   author="perseids",
   author_email="perseids@tufts.edu",
-  description="Converts Greek beta code to Greek characters and vice versa",
+  description="Converts Greek Beta Code to Greek characters and vice versa",
   long_description=long_description,
   long_description_content_type="text/markdown",
   url="https://github.com/perseids-tools/beta-code-py",

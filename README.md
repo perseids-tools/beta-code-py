@@ -1,6 +1,6 @@
 # Beta Code Converter for Python
 
-Converts Greek beta code to Greek characters and vice versa.
+Converts Greek Beta Code to Greek characters and vice versa.
 
 ## Installation
 
@@ -16,8 +16,9 @@ beta_code.greek_to_beta_code('χαῖρε ὦ κόσμε')
 
 beta_code.beta_code_to_greek('mh=nin a)/eide qea\\ *phlhi+a/dew *)axilh=os')
 # => 'μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος'
-
 ```
+
+(See project on [PyPI](https://pypi.org/project/beta-code/))
 
 ## Tests
 
@@ -58,5 +59,4 @@ python3 -m pip install --user --upgrade twine
 
 ## Notes
 
-For the mappings between beta code and Unicode, see [https://github.com/perseids-tools/beta-code-json](https://github.com/perseids-tools/beta-code-json).
-
+For the mappings between Beta Code and Unicode, see [https://github.com/perseids-tools/beta-code-json](https://github.com/perseids-tools/beta-code-json).

@@ -33,6 +33,11 @@ class TestBetaCode(unittest.TestCase):
       beta_code.greek_to_beta_code(u'Πολλὴ μὲν ἐν βροτοῖσι κοὐκ ἀνώνυμος θεὰ κέκλημαι Κύπρις οὐρανοῦ τ᾿ ἔσω·'),
     )
 
+    self.assertEqual(
+      u'mou_s',
+      beta_code.greek_to_beta_code(u'μοῡς', custom_map={ u'ᾱ': u'a_', u'ῑ': u'i_', u'ῡ': u'u_' }),
+    )
+
   def test_beta_code_to_greek(self):
     self.assertEqual(
       u'χαῖρε ὦ κόσμε',
@@ -62,6 +67,11 @@ class TestBetaCode(unittest.TestCase):
     self.assertEqual(
       u'Ὅρκος Ἄζωτον Ἕλληνας Ἆπις',
       beta_code.beta_code_to_greek(u'*o(/rkos *a)/zwton *e(/llhnas *a)=pis'),
+    )
+
+    self.assertEqual(
+      u'μοῡς',
+      beta_code.beta_code_to_greek(u'mou_s', custom_map={ u'a_': u'ᾱ', u'i_': u'ῑ', u'u_': u'ῡ' }),
     )
 
 if __name__ == '__main__':
