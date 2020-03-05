@@ -47,8 +47,7 @@ git commit
 * Install dependencies:
 
 ```bash
-python3 -m pip install --user --upgrade setuptools wheel
-python3 -m pip install --user --upgrade twine
+pip install -r requirements.txt
 ```
 
 * Bump version in `setup.py`
