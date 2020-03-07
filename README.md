@@ -6,19 +6,26 @@ Converts Greek Beta Code to Greek characters and vice versa.
 
 `pip install beta-code`
 
+(See project on [PyPI](https://pypi.org/project/beta-code/))
+
 ## Usage
 
 ```python
 import beta_code
 
-beta_code.greek_to_beta_code('χαῖρε ὦ κόσμε')
+beta_code.greek_to_beta_code(u'χαῖρε ὦ κόσμε')
 # => 'xai=re w)= ko/sme'
 
-beta_code.beta_code_to_greek('mh=nin a)/eide qea\\ *phlhi+a/dew *)axilh=os')
+beta_code.beta_code_to_greek(u'mh=nin a)/eide qea\\ *phlhi+a/dew *)axilh=os')
 # => 'μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος'
 ```
 
-(See project on [PyPI](https://pypi.org/project/beta-code/))
+### With additional mappings
+
+```python
+beta_code.beta_code_to_greek(u'f2a/nac', custom_map={ u'f2': u'ϝ' })
+# => 'ϝάναξ'
+```
 
 ## Tests
 
