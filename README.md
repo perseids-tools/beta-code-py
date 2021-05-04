@@ -62,6 +62,7 @@ pip3 install -r requirements.txt
 * Bump version in `setup.py`
 * Commit and push to GitHub
 * On GitHub, create a new release
+* Run `pip3 install wheel`
 * Run `python3 setup.py sdist bdist_wheel`
 * Run `python3 -m twine upload dist/*`
 
