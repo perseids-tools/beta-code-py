@@ -31,10 +31,6 @@ beta_code.beta_code_to_greek(u'f2a/nac', custom_map={ u'f2': u'ϝ' })
 
 `python -m unittest tests/test_beta_code.py`
 
-### In Python 2
-
-`cd tests/ && python -m unittest test_beta_code`
-
 ## Updating JSON
 
 ```bash
