@@ -1,70 +1,22 @@
-# Beta Code Converter for Python
+# Beta Code JSON
 
-Converts Greek Beta Code to Greek characters and vice versa.
+Map of Greek Beta Code characters to Unicode and from Unicode to Beta Code.
 
-## Installation
+## Standard
 
-`pip install beta-code`
+The mappings in this repository aim mostly to conform to the TLG standard
+specified [here](http://stephanus.tlg.uci.edu/encoding.php).
 
-(See project on [PyPI](https://pypi.org/project/beta-code/))
+Not every application that uses Greek Beta Code follows the TLG standard exactly.
+The mappings try to capture these nonstandard uses without breaking Beta Code encoded
+according to the standard in the following ways:
 
-## Usage
+* Lowercase Latin letters can be used in the Beta Code (e.g. `a`, `w=`)
+* Uppercase Greek letters can be keyed 1. asterisk, 2. breathing, 3. accent, 4. iota subscript, 5. letter (e.g. `*(=|W`)
+* Uppercase Greek letters can be keyed 1. asterisk, 2. letter, 3. breathing, 4. accent, 5. iota subscript (e.g. `*W(=|`)
 
-```python
-import beta_code
+## Example uses
 
-beta_code.greek_to_beta_code(u'χαῖρε ὦ κόσμε')
-# => 'xai=re w)= ko/sme'
-
-beta_code.beta_code_to_greek(u'mh=nin a)/eide qea\\ *phlhi+a/dew *)axilh=os')
-# => 'μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος'
-```
-
-### With additional mappings
-
-```python
-beta_code.beta_code_to_greek(u'f2a/nac', custom_map={ u'f2': u'ϝ' })
-# => 'ϝάναξ'
-```
-
-## Tests
-
-`python -m unittest tests/test_beta_code.py`
-
-### In Python 2
-
-`cd tests/ && python -m unittest test_beta_code`
-
-## Updating JSON
-
-```bash
-git subtree pull --prefix beta_code/vendor/beta-code-json/ https://github.com/perseids-tools/beta-code-json master --squash
-```
-
-In the case of a merge conflict:
-
-```bash
-git checkout --theirs vendor/beta-code-json/
-git add vendor/beta-code-json
-git commit
-```
-
-## Publishing
-
-* Install dependencies:
-
-```bash
-python3 -m venv venv
-. ./venv/bin/activate
-pip3 install -r requirements.txt
-```
-
-* Bump version in `setup.py`
-* Commit and push to GitHub
-* On GitHub, create a new release
-* Run `python3 setup.py sdist bdist_wheel`
-* Run `python3 -m twine upload dist/*`
-
-## Notes
-
-For the mappings between Beta Code and Unicode, see [https://github.com/perseids-tools/beta-code-json](https://github.com/perseids-tools/beta-code-json).
+* [https://github.com/perseids-tools/beta-code-js](https://github.com/perseids-tools/beta-code-js)
+* [https://github.com/perseids-tools/beta-code-rb](https://github.com/perseids-tools/beta-code-rb)
+* [https://github.com/perseids-tools/beta-code-py](https://github.com/perseids-tools/beta-code-py)
