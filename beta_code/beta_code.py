@@ -5,10 +5,10 @@ import os
 import re
 import unicodedata
 
-with open(os.path.join(os.path.dirname(__file__), 'vendor/beta-code-json/beta_code_to_unicode.json')) as json_file:
+with open(os.path.join(os.path.dirname(__file__), 'vendor/beta-code-json/beta_code_to_unicode.json'), encoding='utf-8') as json_file:
   BETA_CODE_TO_UNICODE_MAP = json.load(json_file)
 
-with open(os.path.join(os.path.dirname(__file__), 'vendor/beta-code-json/unicode_to_beta_code.json')) as json_file:
+with open(os.path.join(os.path.dirname(__file__), 'vendor/beta-code-json/unicode_to_beta_code.json'), encoding='utf-8') as json_file:
   UNICODE_TO_BETA_CODE_MAP = json.load(json_file)
 
 def greek_to_beta_code(greek, custom_map=None):
