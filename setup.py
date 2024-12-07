@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="beta_code",
-  version="1.1.0",
+  version="1.1.1",
   author="perseids",
   author_email="perseids@tufts.edu",
   description="Converts Greek Beta Code to Greek characters and vice versa",
